@@ -71,12 +71,13 @@ Projekt został zrealizowany w ramach przedmiotu **Systemy rozpoznawania obrazó
 
 ## 🖥 Interfejs Użytkownika
 
-*(W tym miejscu możesz wkleić screeny ze swojego sprawozdania!)*
 
 ![Strona główna](static/images/screenshot_main.png)
+
 *Rysunek 1: Główny interfejs aplikacji z obszarem Drag & Drop.*
 
 ![Wynik klasyfikacji](static/images/screenshot_result.png)
+
 *Rysunek 2: Przykładowy raport dla gatunku Amanita muscaria.*
 
 ---
