@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozpoznawanie Grzybów</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rozpoznawanie Grzybów</h1>
+        <p>Wgraj plik, przeciągnij, wklej ze schowka (Ctrl+V) lub podaj link.</p>
+
+        <div class="url-input-container">
+            <input type="text" id="imageUrlInput" placeholder="Wklej link do obrazu (.jpg/.png)">
+            <button id="urlSubmitBtn">Sprawdź link</button>
+        </div>
+
+        <div id="drop-area" class="drop-area">
+            <p>Kliknij lub przeciągnij plik tutaj</p>
+            <input type="file" id="fileElem" accept="image/*" style="display:none;">
+        </div>
+
+        <div class="preview-container">
+            <img id="image-preview" src="" alt="Podgląd" style="display:none;">
+        </div>
+
+        <div id="result-container" class="result-container" style="display:none;">
+            <h2>Wynik: <span id="prediction-text" class="highlight">-</span></h2>
+            
+            <div id="wiki-info" style="display:none; text-align: left; margin-top: 20px;">
+                <div id="toxicity-badge" class="badge">Brak danych</div>
+                <p id="wiki-summary" style="font-size: 0.95em; color: #555; line-height: 1.5;"></p>
+                
+                <div style="margin-bottom: 15px;">
+                    <a id="wiki-link" href="#" target="_blank" style="display: none; color: #3498db; text-decoration: none; font-weight: bold;">Czytaj pełny artykuł na Wikipedii ➔</a>
+                </div>
+
+                <small style="color: #999;"><i>Źródło tekstu i zdjęć: Wikipedia | Dane mapy: GBIF</i></small>
+                
+                <div id="reference-gallery" class="reference-gallery"></div>
+                
+                <div id="map-container" style="display:none;">
+                    <h3 style="margin-top: 20px; font-size: 1.1em; color: #333;">Mapa występowania (Globalna):</h3>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

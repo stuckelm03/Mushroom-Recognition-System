@@ -1,0 +1,5 @@
+data_folder/
+mo-106.zip
+*.zip
+__pycache__/
+venv/
