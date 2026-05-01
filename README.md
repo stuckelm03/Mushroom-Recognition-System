@@ -47,7 +47,6 @@ W celu uzyskania rzetelnych wyników zastosowano **stratyfikowany podział danyc
 1. **Sklonuj repozytorium:**
    ```bash
    git clone [https://github.com/stuckelm03/Mushroom-Recognition-System.git](https://github.com/stuckelm03/Mushroom-Recognition-System.git)
-   cd Mushroom-Recognition-System
    ```
 2. **Zainstaluj biblioteki:**
    ```bash
