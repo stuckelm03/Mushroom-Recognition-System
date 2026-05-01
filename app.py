@@ -176,7 +176,7 @@ def get_mushroom_info(mushroom_folder_name):
             "format": "json", "utf8": 1, "srlimit": 1
         }
         
-        s_req = requests.get(search_url, params=search_params, headers=headers, timeout=5, verify=False)
+        s_req = requests.get(search_url, params=search_params, headers=headers, timeout=5, verify=True)
         s_req.raise_for_status()
         search_res = s_req.json()
         
